@@ -4,8 +4,8 @@ def czypalindrom(dany_tekst):
         tzn. czy czytany od przodu i od tyłu brzmi tak samo.
         Argument: string
     """
+    #Przekształć argument do stringa, usuń spacje, pozbądź się wielkich liter
     tekst_bez_spacji = str(dany_tekst).replace(" ", "").lower()
-    i = 1
 
     for i in range(0, len(tekst_bez_spacji)//2):
         if tekst_bez_spacji[i] != tekst_bez_spacji[-(i+1)]:
@@ -15,4 +15,5 @@ def czypalindrom(dany_tekst):
    
 
 #debug line do usunięcia przed wysłaniem
-print(czypalindrom("Mamuta tu mam"))
+imput = "Mamuta tu mam"
+print(czypalindrom(imput))
