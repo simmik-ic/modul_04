@@ -7,6 +7,7 @@ def czypalindrom(dany_tekst):
     #Przekształć argument do stringa, usuń spacje, pozbądź się wielkich liter
     tekst_bez_spacji = str(dany_tekst).replace(" ", "").lower()
 
+    #w zakresie od pierwszego znaku do połowy tekstu 
     for i in range(0, len(tekst_bez_spacji)//2):
         if tekst_bez_spacji[i] != tekst_bez_spacji[-(i+1)]:
             return False
@@ -14,6 +15,6 @@ def czypalindrom(dany_tekst):
     return True
    
 
-#debug line do usunięcia przed wysłaniem
-imput = "Mamuta tu mam"
-print(czypalindrom(imput))
+#debug line do sprawdzenia poprawności działania
+#imput = "Mamuta tu mam"
+#print(czypalindrom(imput))
